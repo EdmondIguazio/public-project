@@ -1,0 +1,19 @@
+kind: project
+metadata:
+  name: hyper-pipeline
+  created: '2022-12-06T07:54:17.970000'
+spec:
+  functions:
+  - url: hyper-steps.py
+    name: steps
+    kind: job
+    image: mlrun/mlrun
+  workflows:
+  - path: workflow-hyper.py
+    name: main
+  artifacts: []
+  source: ''
+  desired_state: online
+  owner: edmond
+status:
+  state: online
